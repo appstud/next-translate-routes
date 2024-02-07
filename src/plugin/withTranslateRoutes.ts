@@ -75,9 +75,7 @@ export const withTranslateRoutes = (userNextConfig: NextConfigWithNTR): NextConf
       if (!config.plugins) {
         config.plugins = []
       }
-      const ROUTER_CONTEXT_PATH = hasOldRouterContextPath
-        ? "'next/dist/shared/lib/router-context'"
-        : "'next/dist/shared/lib/router-context.shared-runtime'"
+      const ROUTER_CONTEXT_PATH = 'next/dist/shared/lib/router-context.shared-runtime'
       config.plugins.push(new DefinePlugin({ ROUTER_CONTEXT_PATH }))
 
       if (!config.module) {
